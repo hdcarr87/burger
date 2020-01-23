@@ -1,10 +1,28 @@
 $(function() {
-    $(".change-devoured").on("click", function(event) {
-        var id = $(this).data("id");
-        var newDevour = $(this).data("newDevour");
+    $(".create-form").on("submit", function(event) {
+        event.preventDefault();
 
-        var newDevourState = {
-            devoured: newDevour
+        var newBurger = {
+            burger_name: $("#ca").val().trim(),
+            devoured: 0
+        }
+        console.log(newBurger)
+
+    $ajax("/api/burgers", {
+        type: "POST",
+        data: newBurger
+        }).then(function() {
+                console.log("created a new burger");
+                location.reload();
+            });
+    });
+
+    $(".change-devoured").on("click", function(event) {
+        event.preventDefaily();
+
+        var id = $(this).data("id");
+        var devouredState = {
+            devoured: 1
         };
 
         $.ajax("/api/burgers/" + id, {
@@ -12,27 +30,7 @@ $(function() {
             data: newDevourState
         }).then(
             function() {
-                console.log("changed devoured to", newDevour);
-                location.reload();
-            }
-        );
-    });
-
-
-    $(".create-form").on("submit", function(event) {
-        event.preventDefault();
-
-        var newBurger = {
-            burger_name: $("#ca").val().trim(),
-            devoured: $("[name=devoured]:checked").val().trim()
-        };
-
-        $ajax("/api/burgers", {
-            type: "POST",
-            data: newBurger
-        }).then(
-            function() {
-                console.log("created a new burger");
+                console.log("Devoured!");
                 location.reload();
             }
         );

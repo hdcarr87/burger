@@ -1,12 +1,42 @@
-image {
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    font: black, bold;
+}
+
+#wrapper {
+    background-color: red;
+    border-radius: 5px;
+    border-width: 80%;
+    margin: 50px;
+    padding: 10px;
+}
+
+.image {
     align: center;
     height: 200px;
     width: 200px;
 }
 
 .toEat {
-    float: left
+    float: left;
     margin: 10px;
     padding: 10px;
-    background: red;
+}
+
+.devoured {
+    float: left;
+    margin-right: 10px;
+    padding-left: 10px;
+}
+
+.change-devoured {
+    background-color: whitesmoke;
+    font: black;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    background-color: whitesmoke;
+    font: black;
+    border-radius: 5px; 
 }
