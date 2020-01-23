@@ -1,13 +1,14 @@
 <div id  =wrapper>
+  
+    <h1>Eat-Da-Burger!</h1>
+    <img scr="../public/assets/img/burger.jpg" alt="image of a burger" class=image>
 
-<h1>Eat-Da-Burger!</h1>
-<img scr="../public/assets/img/burger.jpg" alt="image of a burger" class=image>
-
-<h2>Add a Burger</h2>
-<form class="create-form">
+  <div class="eat">
+    <h2>Add a Burger</h2>
+    <form class="create-form">
 
     <label for="ca">Add your Favorite Burger</label><br>
-    <input type="text" id="burgerName" name="name">
+    <input type="text" id="burgerTxt" name="name">
   
   <button type="submit" class="submit-btn">Add Burger to be Eaten!</button>
 </form>
@@ -19,7 +20,7 @@
     {{#each devoured}}
       {{#unless devoured}}
       <span class="li">{{this.butger_name}}
-        <button class="change-devoured" data-id="{{this.id}}" data-newdevour="{{devoured}}">Eat up!</button>
+        <button class="change-devoured" data-id="{{this.id}}" data-newDevoured="{{devour}}">Eat up!</button>
         </span>
         <br>
     {{/unless}}
@@ -32,11 +33,12 @@
 		<ul>
   {{#each burger}}
     {{#if devoured}}
-      {{Devoured}}
+      <span class="li">{{this.burger_name}}</span>
       <br>
     {{/if}}
   {{/each}}
 </ul>
 </div>
+
 </div>
 

@@ -1,6 +1,8 @@
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
     font: black, bold;
+    background-color: red;
+    font-size: 30px;
 }
 
 #wrapper {
@@ -9,6 +11,7 @@ body {
     border-width: 80%;
     margin: 50px;
     padding: 10px;
+    font: black, bold;
 }
 
 .image {
@@ -18,25 +21,29 @@ body {
 }
 
 .toEat {
-    float: left;
     margin: 10px;
     padding: 10px;
+    font: black;
+    font-size: 20px;
 }
 
 .devoured {
-    float: left;
     margin-right: 10px;
     padding-left: 10px;
+    font: black;
+    font-size: 20px;
 }
 
 .change-devoured {
     background-color: whitesmoke;
     font: black;
     border-radius: 5px;
+    font-size: 15px;
 }
 
 .submit-btn {
     background-color: whitesmoke;
     font: black;
     border-radius: 5px; 
+    font-size: 15px;
 }
