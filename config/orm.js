@@ -4,7 +4,7 @@ var connection = require("../config/connection.js");
 
 //selectAll()
 var orm = {
-    all: function(tableInput, cb) {
+    selectAll: function(tableInput, cb) {
         var queryString = "SELECT * FROM ??"; "";
 
         connection.query(queryString, [tableInput], function(err, result) {
@@ -15,7 +15,7 @@ var orm = {
         });
     },
 //insertOne()
-    create: function(table, cols, vals, cb) {
+    createOne: function(table, cols, vals, cb) {
         var queryString = "INTERT INTO" + table;
 
         queryString += " (";
@@ -36,7 +36,7 @@ var orm = {
         });
     },
 //updateOne()
-    update: function(table, objColVals, condition, cb) {
+    updateOne: function(table, objColVals, condition, cb) {
         var queryString = "UPDATE" + table;
 
         queryString += " SET ";
