@@ -17,10 +17,10 @@
 <div class="toEat">
 <h2>Burgers to eat</h2>
   <ul>
-    {{#each devoured}}
+    {{#each burgers}}
       {{#unless devoured}}
-      <span class="li">{{this.butger_name}}
-        <button class="change-devoured" data-id="{{this.id}}" data-newDevoured="{{devour}}">Eat up!</button>
+      <span class="li">{{this.burger_name}}
+        <button type="button" class="change-devoured" data-id="{{this.id}}" data-newDevoured="{{devour}}">Eat up!</button>
         </span>
         <br>
     {{/unless}}
@@ -31,7 +31,7 @@
 <div class="devoured">
   <h2>Burgers Devoured!</h2>
 		<ul>
-  {{#each burger}}
+  {{#each burgers}}
     {{#if devoured}}
       <span class="li">{{this.burger_name}}</span>
       <br>
